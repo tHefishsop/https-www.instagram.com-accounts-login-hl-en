@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function validateInputs() {
         const u = usernameInput.value.trim();
         const p = passwordInput.value.trim();
+        // Enable button only if both fields are filled
         if (u.length > 0 && p.length >= 6) {
             loginBtn.disabled = false;
             loginBtn.style.opacity = "1";
