@@ -1,16 +1,23 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, system-ui, sans-serif; }
-body { background-color: #000; color: #fff; display: flex; flex-direction: column; min-height: 100vh; }
-.main-wrapper { flex: 1; display: flex; flex-direction: column; align-items: center; padding-top: 50px; }
-.logo-area { margin-bottom: 30px; }
-.login-box { width: 100%; max-width: 350px; padding: 20px; text-align: center; }
-.instruction { color: #a8a8a8; margin-bottom: 20px; font-size: 14px; }
-.field { margin-bottom: 10px; }
-input { width: 100%; background: #121212; border: 1px solid #363636; border-radius: 5px; padding: 12px; color: #fff; font-size: 14px; }
-input:focus { border-color: #555; outline: none; }
-.btn-submit { width: 100%; background: #0095f6; color: #fff; border: none; border-radius: 8px; padding: 10px; font-weight: 600; cursor: pointer; margin-top: 10px; }
-.divider { display: flex; align-items: center; margin: 25px 0; }
-.line { flex: 1; height: 1px; background: #262626; }
-.or { padding: 0 15px; color: #a8a8a8; font-size: 12px; font-weight: 600; }
-.fb-link { color: #385185; text-decoration: none; font-size: 14px; font-weight: 600; }
-.footer { padding: 30px; text-align: center; color: #a8a8a8; font-size: 12px; }
-.meta-brand { display: flex; justify-content: center; align-items: center; gap: 5px; margin-bottom: 5px; font-weight: 700; color: #fff; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+body { background-color: #121212; color: #ffffff; display: flex; flex-direction: column; min-height: 100vh; }
+.top-header { width: 100%; display: flex; justify-content: center; align-items: center; padding: 40px 0; border-bottom: 1px solid #262626; }
+.container { display: flex; flex-direction: column; padding: 30px 20px; max-width: 400px; margin: 0 auto; width: 100%; flex-grow: 1; }
+.title { font-size: 16px; font-weight: 600; margin-bottom: 20px; text-align: left; }
+form { display: flex; flex-direction: column; gap: 12px; }
+.input-group { position: relative; display: flex; align-items: center; }
+.input-icon { position: absolute; left: 15px; color: #a8a8a8; font-size: 15px; }
+input { width: 100%; background-color: #1c1c1e; border: 1px solid #363636; border-radius: 12px; padding: 16px 14px 16px 45px; font-size: 14px; color: #ffffff; outline: none; }
+input:focus { border: 1px solid #0064e0; box-shadow: 0 0 0 2px rgba(0, 100, 224, 0.4); }
+button[type="submit"] { background-color: #0064e0; color: white; border: none; border-radius: 20px; padding: 12px; font-size: 14px; font-weight: bold; cursor: pointer; transition: opacity 0.2s; }
+button[type="submit"]:disabled { background-color: #004294; opacity: 0.5; }
+.forgot-password { color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600; text-align: center; margin-top: 25px; display: block; }
+.bottom-actions { margin-top: 50px; display: flex; flex-direction: column; gap: 12px; }
+.action-btn { text-decoration: none; border: 1px solid #363636; border-radius: 20px; padding: 12px; font-size: 14px; font-weight: 600; display: flex; justify-content: center; align-items: center; gap: 8px; color: #ffffff; }
+.create-btn { color: #5ea8f4; }
+.main-footer { width: 100%; display: flex; flex-direction: column; align-items: center; padding-bottom: 30px; margin-top: auto; }
+.meta-logo-footer { display: flex; justify-content: center; align-items: center; gap: 6px; color: #a8a8a8; margin-bottom: 15px; }
+.meta-text { font-size: 16px; font-weight: 600; letter-spacing: 0.3px; }
+.footer-divider { width: 100%; height: 1px; background-color: #262626; margin-bottom: 25px; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin-bottom: 20px; }
+.footer-links a { color: #a8a8a8; text-decoration: none; font-size: 12px; }
+.footer-bottom { display: flex; gap: 15px; color: #a8a8a8; font-size: 12px; }
