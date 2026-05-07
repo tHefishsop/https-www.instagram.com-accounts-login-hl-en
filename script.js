@@ -1,40 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.querySelector('form');
-    const submitBtn = document.querySelector('.btn-submit');
-    const inputs = document.querySelectorAll('input');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const loginBtn = document.getElementById('loginBtn');
 
-    // وظيفة للتحقق من أن الخانات ليست فارغة
-    function checkInputs() {
-        let allFilled = true;
-        inputs.forEach(input => {
-            if (input.value.trim() === '') {
-                allFilled = false;
-            }
-        });
-        
-        // تفعيل أو تعطيل الزر بناءً على المدخلات
-        if (allFilled) {
-            submitBtn.style.opacity = '1';
-            submitBtn.style.cursor = 'pointer';
-            submitBtn.disabled = false;
+    function validateInputs() {
+        const u = usernameInput.value.trim();
+        const p = passwordInput.value.trim();
+        // Enable button only if both fields are filled
+        if (u.length > 0 && p.length >= 6) {
+            loginBtn.disabled = false;
+            loginBtn.style.opacity = "1";
         } else {
-            submitBtn.style.opacity = '0.5';
-            submitBtn.style.cursor = 'not-allowed';
-            submitBtn.disabled = true;
+            loginBtn.disabled = true;
+            loginBtn.style.opacity = "0.5";
         }
     }
 
-    // الاستماع لأي تغيير في الكتابة داخل الخانات
-    inputs.forEach(input => {
-        input.addEventListener('input', checkInputs);
-    });
-
-    // عند الضغط على زر الإرسال
-    loginForm.addEventListener('submit', () => {
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verifying...';
-        submitBtn.style.background = '#004294';
-    });
-
-    // تشغيل التحقق لأول مرة عند تحميل الصفحة
-    checkInputs();
+    usernameInput.addEventListener('input', validateInputs);
+    passwordInput.addEventListener('input', validateInputs);
 });
